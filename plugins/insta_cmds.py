@@ -74,6 +74,12 @@ async def post(bot, message):
         return
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     await bot.send_message(
             message.from_user.id,
             f"What type of post do you want to download?.",
@@ -104,6 +110,12 @@ async def igtv(bot, message):
         return
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     m=await message.reply_text(f"Fetching IGTV from <code>@{username}</code>")
     profile = Profile.from_username(insta.context, username)
     igtvcount = profile.igtvcount
@@ -137,6 +149,12 @@ async def followers(bot, message):
         return
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     profile = Profile.from_username(insta.context, username)
     name=profile.full_name
     m=await message.reply_text(f"Fetching Followers list of <code>@{username}</code>")
@@ -176,6 +194,12 @@ async def followees(bot, message):
         return
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     profile = Profile.from_username(insta.context, username)
     name=profile.full_name
     m=await message.reply_text(f"Fetching Followees list of <code>@{username}</code>")
@@ -327,6 +351,12 @@ async def tagged(bot, message):
         return
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     m=await message.reply_text(f"Fetching the posts in which <code>@{username}</code> is tagged.")
     chat_id=message.from_user.id
     dir=f"{chat_id}/{username}"
@@ -366,6 +396,12 @@ async def story(bot, message):
         return
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     m=await message.reply_text(f"Fetching stories of <code>@{username}</code>")
     chat_id=message.from_user.id
     dir=f"{chat_id}/{username}"
@@ -441,6 +477,12 @@ async def highlights(bot, message):
     text=message.text
     if " " in text:
         cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
     m=await message.reply_text(f"Fetching highlights from profile <code>@{username}</code>")
     chat_id=message.from_user.id
     dir=f"{chat_id}/{username}"

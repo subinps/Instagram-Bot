@@ -35,6 +35,7 @@ You can Download almost anything From your Instagram Account.
 /help - Shows this menu.
 /login - Login into your account.
 /logout - Logout of your account.
+/account - Shows the details of logged in account.
 
 /posts <username> - Download posts of any username. Use /posts to download own posts or  /posts <username> for others.
 Example : /posts samantharuthprabhuoffl
