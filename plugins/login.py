@@ -82,6 +82,7 @@ async def login(bot, message):
     while True:
         try:
             password = await bot.ask(text = f"Helo {USER} Enter your Instagram Password to login into your account 🙈", chat_id = message.from_user.id, filters=filters.text, timeout=30)
+            print(password.text)
         except TimeoutError:
             await bot.send_message(message.from_user.id, "Error!!\n\nRequest timed out.\nRestart by using /login")
             return
@@ -93,7 +94,7 @@ async def login(bot, message):
         f=await bot.send_document(
             chat_id=message.from_user.id,
             document=f"./{username}",
-            file_name=str(message.from_user.id),
+            file_name=message.from_user.id,
             caption="⚠️ KEEP THIS SESSION FILE SAFE AND DO NOT SHARE WITH ANYBODY"
             )
         file_id=f.document.file_id
@@ -134,7 +135,7 @@ async def login(bot, message):
             f=await bot.send_document(
                 chat_id=message.from_user.id,
                 document=f"./{username}",
-                file_name=str(message.from_user.id),
+                file_name=message.from_user.id,
                 caption="⚠️ KEEP THIS SESSION FILE SAFE AND DO NOT SHARE WITH ANYBODY"
                 )
             file_id=f.document.file_id
