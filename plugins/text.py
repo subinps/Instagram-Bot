@@ -48,7 +48,7 @@ async def account(bot, message):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122"),
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122"),
                         
 					],
                     [
@@ -130,7 +130,7 @@ async def _insta_post_batch(bot, message):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122"),
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122"),
                         
 					],
                     [

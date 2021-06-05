@@ -193,7 +193,7 @@ async def upload(m, bot, chat_id, dir):
             [
                 [
 					InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-					InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122")
+					InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
 				],
 				[
 					InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),

@@ -44,8 +44,7 @@ async def start(bot, cmd):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122"),
-						InlineKeyboardButton("⚙️Update Channel", url="https://t.me/subin_works")
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
 					],
                     [
                         InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
@@ -68,7 +67,7 @@ async def start(bot, cmd):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122"),
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122"),
 					],
                     [
                         InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot")
@@ -93,7 +92,7 @@ async def help(bot, cmd):
 			[
 				[
 					InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-					InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122"),
+					InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122"),
 					InlineKeyboardButton("⚙️Update Channel", url="https://t.me/subin_works")
 					
 				],
@@ -115,7 +114,7 @@ async def stop(bot, cmd):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122")	
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")	
 					],
                     [
                         InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),

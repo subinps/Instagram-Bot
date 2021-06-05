@@ -46,7 +46,7 @@ async def login(bot, message):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122")
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
 					],
                     [
                         InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
@@ -174,7 +174,7 @@ async def logout(bot, message):
 				[
 					[
 						InlineKeyboardButton("👨🏼‍💻Developer", url='https://t.me/subinps'),
-						InlineKeyboardButton("🤖Othor Bots", url="https://t.me/subin_works/122")
+						InlineKeyboardButton("🤖Other Bots", url="https://t.me/subin_works/122")
 					],
                     [
                         InlineKeyboardButton("🔗Source Code", url="https://github.com/subinps/Instagram-Bot"),
