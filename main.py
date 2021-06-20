@@ -102,6 +102,14 @@ bot.send(
                 description="Sends a list followees of given username"
             ),
             types.BotCommand(
+                command="fans",
+                description="Get a list of followees who is following back."
+            ),
+            types.BotCommand(
+                command="notfollowing",
+                description="Get a list of followees who is not following back."
+            ),
+            types.BotCommand(
                 command="tagged",
                 description="Download all posts tagged with given username"
             ),

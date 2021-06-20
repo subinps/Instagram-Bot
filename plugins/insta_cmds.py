@@ -223,6 +223,124 @@ async def followees(bot, message):
         os.remove(f"./{username}'s followees.txt")
 
 
+
+
+@Client.on_message(filters.command("fans") & filters.private)
+async def fans(bot, message):
+    if str(message.from_user.id) != OWNER:
+        await message.reply_text(
+            HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, OWNER),
+            reply_markup=buttons,
+			disable_web_page_preview=True
+        )
+        return
+    text=message.text
+    username=USER
+    if 1 not in STATUS:
+        await message.reply_text("You Must Login First /login ")
+        return
+    if " " in text:
+        cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
+    profile = Profile.from_username(insta.context, username)
+    name=profile.full_name
+    m=await message.reply_text(f"Fetching list of followees of <code>@{username}</code> who follows <code>@{username}</code>.")
+    chat_id=message.from_user.id
+    f = profile.get_followers()
+    fl = profile.get_followees()
+    flist=[]
+    fmlist=[]
+    for fn in f:
+        u=fn.username
+        flist.append(u)
+    for fm in fl:
+        n=fm.username
+        fmlist.append(n)
+
+    fans = [value for value in fmlist if value in flist]
+    print(len(fans))
+    followers=f"**Fans List for {name}**\n\n"
+    for p in fans:
+        followers += f"\n[{p}](www.instagram.com/{p})"
+    try:
+        await m.delete()
+        await bot.send_message(chat_id=chat_id, text=followers)
+    except MessageTooLong:
+        followers=f"**Fans List for {name}**\n\n"
+        
+        for p in fans:
+            followers += f"\nName: {p} :     Link to Profile: www.instagram.com/{p}"
+        text_file = open(f"{username}'s fans.txt", "w")
+        text_file.write(followers)
+        text_file.close()
+        await bot.send_document(chat_id=chat_id, document=f"./{username}'s fans.txt", caption=f"{name}'s fans\n\nA Project By [XTZ_Bots](https://t.me/subin_works)")
+        os.remove(f"./{username}'s fans.txt")
+
+
+@Client.on_message(filters.command("notfollowing") & filters.private)
+async def nfans(bot, message):
+    if str(message.from_user.id) != OWNER:
+        await message.reply_text(
+            HOME_TEXT.format(message.from_user.first_name, message.from_user.id, USER, USER, USER, OWNER),
+            reply_markup=buttons,
+			disable_web_page_preview=True
+        )
+        return
+    text=message.text
+    username=USER
+    if 1 not in STATUS:
+        await message.reply_text("You Must Login First /login ")
+        return
+    if " " in text:
+        cmd, username = text.split(' ')
+        profile = Profile.from_username(insta.context, username)
+        is_followed = yes_or_no(profile.followed_by_viewer) 
+        type = acc_type(profile.is_private)
+        if type == "🔒Private🔒" and is_followed == "No":
+            await message.reply_text("Sorry!\nI can't fetch details from that account.\nSince its a Private account and you are not following <code>@{username}</code>.")
+            return
+    profile = Profile.from_username(insta.context, username)
+    name=profile.full_name
+    m=await message.reply_text(f"Fetching list of followees of <code>@{username}</code> who is <b>not</b> following <code>@{username}</code>.")
+    chat_id=message.from_user.id
+    f = profile.get_followers()
+    fl = profile.get_followees()
+    flist=[]
+    fmlist=[]
+    for fn in f:
+        u=fn.username
+        flist.append(u)
+    for fm in fl:
+        n=fm.username
+        fmlist.append(n)
+
+    fans = list(set(fmlist) - set(flist))
+    print(len(fans))
+    followers=f"**Followees of <code>@{username}</code> who is <b>not</b> following <code>@{username}</code>**\n\n"
+    for p in fans:
+        followers += f"\n[{p}](www.instagram.com/{p})"
+    try:
+        await m.delete()
+        await bot.send_message(chat_id=chat_id, text=followers)
+    except MessageTooLong:
+        followers=f"Followees of <code>@{username}</code> who is <b>not</b> following <code>@{username}</code>\n\n"
+        for p in fans:
+            followers += f"\nName: {p} :     Link to Profile: www.instagram.com/{p}"
+        text_file = open(f"{username}'s Non_followers.txt", "w")
+        text_file.write(followers)
+        text_file.close()
+        await bot.send_document(chat_id=chat_id, document=f"./{username}'s Non_followers.txt", caption=f"{name}'s Non_followers\n\nA Project By [XTZ_Bots](https://t.me/subin_works)")
+        os.remove(f"./{username}'s Non_followers.txt")
+
+
+
+
+
 @Client.on_message(filters.command("feed") & filters.private)
 async def feed(bot, message):
     if str(message.from_user.id) != OWNER:

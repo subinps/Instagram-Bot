@@ -14,17 +14,19 @@ You can Download almost anything From your Instagram Account.
 
 **What Can Be Downloaded?:**
 ```
-    1. All posts of any Profile. (Both Public and Private profiles which you follows.)
+    1. All posts of any Profile. (Both Public and Private,for private profiles you need to be a follower.)
     2. All Posts from your feed.
-    3. Stories of any profile (Both Public and Private profiles which you follows.)
+    3. Stories of any profile (Both Public and Private,for private profiles you need to be a follower.)
     4. DP of any profile (No need to follow)
     5. Followers and Followees List of any Profile.
-    6. Stories of your Followees.
-    7. Tagged posts of any profile.
-    8. Your saved Posts.
-    9. IGTV videos.
-    10. Highlights from any profiles.
-    11. Any Public Post from Link(Post/Reels/IGTV)
+    6. List of followees who follows back the given username.
+    7. List of followees who are not following back the given username.
+    8. Stories of your Followees.
+    9. Tagged posts of any profile.
+    10. Your saved Posts.
+    11. IGTV videos.
+    12. Highlights from any profiles.
+    13. Any Public Post from Link(Post/Reels/IGTV)
 
 ```
 
@@ -52,6 +54,10 @@ Example: /saved 10 to download latest 10 saved posts.
 Example: /followers samantharuthprabhuoffl
 
 /followees <username> - Get a list of all followees of given username. If no username given, then your list will be retrieved.
+
+/fans <username> - Get a list of of followees who follow back the given username. If no username given, your list will be retrieved.
+
+/notfollowing <username> - Get a list of followees who is not following back the given username.
 
 /tagged <username> - Downloads all posts in which given username is tagged. If nothing given your tagged posts will be downloaded.
 
