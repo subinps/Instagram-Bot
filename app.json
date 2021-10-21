@@ -8,7 +8,7 @@
       "download",
       "bot"
     ],
-    "repository": "https://github.com/subinps/Instagram-Bot",
+    "repository": "https://github.com/infotechIT/Instagram-Bot",
     "env": {
       "API_ID": {
         "description": "Get this value from https://my.telegram.org",
