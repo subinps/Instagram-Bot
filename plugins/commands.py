@@ -51,7 +51,7 @@ async def start(bot, cmd):
 						InlineKeyboardButton("🧩Deploy Own Bot", url="http://heroku.com/deploy?template=https://github.com/infotechIT/Instagram-Bot")
                     ],
                     [
-                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#subin"),
+                        InlineKeyboardButton("👨🏼‍🦯How To Use?", callback_data="help#itzmerixo"),
 						InlineKeyboardButton("⚙️Update Channel", url="https://t.me/infotechIT")
 
                     ]
