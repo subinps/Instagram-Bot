@@ -53,6 +53,7 @@ You can also sent a post link to download the post or video.
 
 For Example:
 <code>https://www.instagram.com/p/CL4QbUiLRNW/?utm_medium=copy_link</code>
+<code>https://www.instagram.com/taylorswift/p/CWds7zapgHn/?utm_medium=copy_link</code>
 
 
 <b>Available Commands and Usage</b>
