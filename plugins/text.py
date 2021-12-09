@@ -157,7 +157,7 @@ async def _insta_post_batch(bot, message):
         await m.edit("Stories from links are not yet supported🥴\n\nYou can download stories from Username.")
         return
 
-    link = r'^https:\/\/www\.instagram\.com\/(p|tv|reel)\/([A-Za-z0-9\-_]*)'
+    link = r'^https://www\.instagram\.com/([A-Za-z0-9._]+/)?(p|tv|reel)/([A-Za-z0-9\-_]*)'
     result = re.search(link, username)
     
     if result:
@@ -166,12 +166,12 @@ async def _insta_post_batch(bot, message):
             'tv': 'IGTV',
             'reel': 'REELS'
         }
-        supported = Post_type.get(result.group(1))
+        supported = Post_type.get(result.group(2))
         if not supported:
             await m.edit('Unsupported Format')
             return
         sent = await m.edit(f'`Fetching {supported} Content from Instagram.`')
-        shortcode = result.group(2)
+        shortcode = result.group(3)
         try:
             userid=str(message.from_user.id)
             dir=f"{userid}/{shortcode}"
