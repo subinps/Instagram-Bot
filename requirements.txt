@@ -1,4 +1,4 @@
-pyrogram
+pyrogram==1.4.15
 tgcrypto
 instaloader
 pyromod
