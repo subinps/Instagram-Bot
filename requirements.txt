@@ -1,5 +1,6 @@
 pyrogram==1.4.15
 tgcrypto
+python-dotenv==0.20.0
 instaloader
 pyromod
 pytz
