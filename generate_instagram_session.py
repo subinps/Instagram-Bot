@@ -31,18 +31,18 @@ L = Instaloader()
 
 
 async def generate():
-    print("Enter your Telegram API_ID")
+    print("14699743")
     API_ID = input()
-    print("Enter API_HASH")
+    print("0cef89ed2c8025c16d2b4d42a1b8d792")
     API_HASH = input()
-    print("Enter Your BOT_TOKEN from Botfather")
+    print("5475420387:AAFGC0PAzv23d8fBSm2xCPlDgBggcAFw9Ls")
     BOT_TOKEN = input()
 
     bot = Client("INSTASESSION", API_ID, API_HASH, bot_token=BOT_TOKEN)
     await bot.start()
-    print("Now Enter your Instagram username")
+    print("savior_128_")
     id = input()
-    print("Enter Your Instagram Password")
+    print("136707nafaS@")
     pwd = input()
     try:
         L.login(id, pwd)
@@ -59,7 +59,7 @@ async def generate():
         return
     print("Succesfully Logged into Instagram")
     while True:
-        print("To send your Session file enter Your Telegram ID as Integer")
+        print("5059280908")
         tg_id = input()
         try:
             owner = int(tg_id)
