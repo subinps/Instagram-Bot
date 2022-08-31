@@ -29,7 +29,7 @@ import glob
 from videoprops import get_audio_properties
 from pyrogram.errors import FloodWait
 from pyrogram.types import InputMediaPhoto, InputMediaVideo, InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
-IST = pytz.timezone('Asia/Kolkata')
+IST = pytz.timezone('Asia/Tehran')
 USER=Config.USER
 
 
