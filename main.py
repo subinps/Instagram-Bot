@@ -27,12 +27,12 @@ STATUS=Config.STATUS
 
 USER=Config.USER
 bot = Client(
-    "InstaSessibon",
+    "InstaSession",
     bot_token=Config.BOT_TOKEN,
     api_id=Config.API_ID,
     api_hash=Config.API_HASH,
     workers=50,
-    plugins=dict(root="plugins")
+    plugins=dict(enabled=True, root="plugins", include=['commands', 'callback', 'insta_cmds', 'login', 'text'], exclude=[])
     )
 
 
