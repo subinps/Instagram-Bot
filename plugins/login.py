@@ -81,7 +81,7 @@ async def login(bot, message):
         return
     while True:
         try:
-            password = await bot.ask(text = f"Helo {USER} Enter your Instagram Password to login into your account 🙈", chat_id = message.from_user.id, filters=filters.text, timeout=30)
+            password = await bot.ask(text = f"Helo {USER} Enter your Instagram Password to login into your account 🙈", identifier=(message.from_user.id, None, None), filters=filters.text, timeout=30)
         except TimeoutError:
             await bot.send_message(message.from_user.id, "Error!!\n\nRequest timed out.\nRestart by using /login")
             return
